@@ -9,6 +9,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 COPY index.php /var/www/html/index.php
+COPY new.php /var/www/html/new.php
 COPY redlock-db.sql /docker-entrypoint-initdb.d/redlock-db.sql
 
 RUN chown -R www-data:www-data /var/www/html && \
